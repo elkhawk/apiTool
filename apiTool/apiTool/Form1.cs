@@ -16,5 +16,21 @@ namespace apiTool
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileWindow = new OpenFileDialog();
+            fileWindow.InitialDirectory = Application.ExecutablePath;
+            fileWindow.Filter = " 头文件(*.h)";
+            fileWindow.FilterIndex = 1;
+            fileWindow.RestoreDirectory = true;
+
+            if(fileWindow.ShowDialog() == DialogResult.OK)
+            {
+                string[] filePaths = fileWindow.FileNames;
+
+            }
+
+        }
     }
 }
