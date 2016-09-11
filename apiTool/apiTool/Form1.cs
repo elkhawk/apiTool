@@ -21,9 +21,10 @@ namespace apiTool
         {
             OpenFileDialog fileWindow = new OpenFileDialog();
             fileWindow.InitialDirectory = Application.ExecutablePath;
-            fileWindow.Filter = " 头文件(*.h)";
+            fileWindow.Filter = "头文件(*.h)|";
             fileWindow.FilterIndex = 1;
             fileWindow.RestoreDirectory = true;
+            fileWindow.Multiselect = true;
 
             if(fileWindow.ShowDialog() == DialogResult.OK)
             {
